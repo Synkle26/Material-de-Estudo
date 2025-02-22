@@ -1,1 +1,1 @@
-Este repositório é objetvado à ser apenas para meus estudos.
+Este repositório tem por objetivo ser um local para armazenar material de meus estudos.
