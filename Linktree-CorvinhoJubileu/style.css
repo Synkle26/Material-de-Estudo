@@ -1,96 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
 *{
-    padding: 5px;
-    margin: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+  padding: 0;
+  margin: 0;
+}
   
-  body{
-    text-align: center;
-    background: rgb(54,252,253);
-    background: linear-gradient(145deg, rgba(54,252,253,1) 0%, rgba(51,54,123,1) 65%, rgba(55,16,99,1) 100%);
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-    background: url('./assets/Background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-  }
+body{
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  background: rgb(54,252,253);
+  background: linear-gradient(145deg, rgba(54,252,253,1) 0%, rgba(51,54,123,1) 65%, rgba(55,16,99,1) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  background: url('./assets/Background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
   
-  .imgcorvo{
-    border-radius: 100px;
-    justify-content: center;
-    justify-items: center;
-    border: solid 5px;
-    color: white;
-    padding: 1px;
-  }
+.imgcorvo{
+  border-radius: 100%;
+  justify-content: center;
+  justify-items: center;
+  border: solid 0.3rem;
+  color: white;
+  margin: 1rem;
+  padding: 0;
+}
 
-  h1{
-    color: white;
-    font-size: 38px;
-    padding: 15px 0 25px 0;
-  }
+h1{
+  color: white;
+  font-size: 40px;
+  padding: 0.5rem 0;
+  margin: 1rem;
+}
 
-  p{
-    color: white;
-    font-size: 20px;
-    padding: 20px 0 10px 0;
-  }
+p{
+  color: white;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  margin: 1.5rem;
+}
+
+.p-footer{
+  text-decoration: none;
+}
   
 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #29d9fe;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+  color: #29d9fe;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 a:hover {
-    transform: scale(1.2);
-    color: #ffffff;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
   
-  button {
-    background: white;
-    color: black;
-    border: none;
-    margin: 10px;
-    width: 400px;
-    height: 75px;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 35px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, background 0.3s, color 0.3s;
+button {
+  background: white;
+  color: black;
+  border: none;
+  margin: 0.8rem;
+  width: 200px;
+  height: 75px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 35px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, background 0.3s, color 0.3s;
 }
 
 button:hover {
-    background: linear-gradient(145deg, #2d2a75, #29d9fe);
-    color: white;
-    transform: scale(1.1);
+  background: linear-gradient(145deg, #2d2a75, #29d9fe);
+  color: white;
+  transform: scale(1.1);
 }
 
 button::before {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
-    background: linear-gradient(
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
         75deg,
         rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 0.3) 50%,
         rgba(255, 255, 255, 0) 100%
     );
-    transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 button:hover::before {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
