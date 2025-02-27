@@ -1,3 +1,3 @@
-A arte de fundo é do jogo "Art of Rally"
+A arte de fundo é do jogo <em>"Art of Rally"</em>
 
 The background art is from the game "Art of Rally"
