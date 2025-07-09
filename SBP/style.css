@@ -1,0 +1,497 @@
+/* Variáveis para cores */
+:root {
+    /* Modo Claro (Tons de Verde) */
+    --primary-color-light: #28a745; /* Verde vibrante */
+    --secondary-color-light: #218838; /* Verde mais escuro para hover */
+    --background-color-light: #f8f9fa; /* Fundo claro */
+    --text-color-light: #343a40; /* Texto escuro */
+    --card-background-light: #ffffff; /* Fundo de cartões */
+    --border-color-light: #dee2e6; /* Cor da borda */
+    --shadow-color-light: rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Modo Escuro (Tons de Verde Escuro) */
+body.dark-mode {
+    --primary-color: #4CAF50; /* Verde principal mais claro para contraste */
+    --secondary-color: #388E3C; /* Verde mais escuro para hover */
+    --background-color: #212529; /* Fundo bem escuro */
+    --text-color: #f8f9fa; /* Texto claro */
+    --card-background: #343a40; /* Fundo de cartões mais escuro */
+    --border-color: #495057; /* Cor da borda escura */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+}
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color-light);
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--primary-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color-light);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color-light);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color-light);
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--card-background-light);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color-light);
+    box-shadow: 0 2px 5px var(--shadow-color-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--text-color-light);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#theme-toggle img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: var(--background-color-light);
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color-light);
+}
+
+/* Sections General Styling */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--card-background-light);
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color-light);
+}
+
+/* Benefits Section */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    background-color: var(--card-background-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color-light);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow-color-light);
+}
+
+.benefit-item img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.benefit-item h4 {
+    color: var(--primary-color-light);
+    margin-bottom: 10px;
+}
+
+/* Join Section */
+.join-section {
+    background-color: var(--background-color-light);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: var(--card-background-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color-light);
+}
+
+.join-form input,
+.join-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.join-form input:focus,
+.join-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color-light);
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.join-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px var(--shadow-color-light);
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color-light); /* Fundo escuro para o rodapé */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    gap: 30px;
+}
+
+.footer-info, .social-media {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.footer-info h4, .social-media h4 {
+    color: var(--primary-color-light);
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-media img {
+    height: 30px;
+    width: 30px;
+    filter: invert(1); /* Inverte a cor dos ícones para ficarem brancos no fundo escuro */
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: var(--primary-color);
+}
+
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+body.dark-mode a:hover {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .btn {
+    background-color: var(--primary-color);
+    color: var(--background-color); /* Botão claro no modo escuro */
+}
+
+body.dark-mode .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode header {
+    background-color: var(--card-background);
+    border-bottom-color: var(--border-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+body.dark-mode .logo h1 {
+    color: var(--text-color);
+}
+
+body.dark-mode header nav ul li a {
+    color: var(--text-color);
+}
+
+body.dark-mode .hero-section {
+    background-color: var(--background-color);
+}
+
+body.dark-mode .hero-image img,
+body.dark-mode .about-image img,
+body.dark-mode .join-image img {
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+body.dark-mode section:nth-of-type(odd) {
+    background-color: var(--card-background);
+}
+
+body.dark-mode .benefit-item {
+    background-color: var(--card-background);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+body.dark-mode .benefit-item:hover {
+    box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+body.dark-mode .benefit-item h4 {
+    color: var(--primary-color);
+}
+
+body.dark-mode .join-section {
+    background-color: var(--background-color);
+}
+
+body.dark-mode .join-form {
+    background-color: var(--card-background);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+body.dark-mode .join-form input,
+body.dark-mode .join-form textarea {
+    border-color: var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .join-form input:focus,
+body.dark-mode .join-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Sombra verde claro */
+}
+
+body.dark-mode footer {
+    background-color: var(--card-background); /* Rodapé em tom de verde escuro */
+    color: var(--text-color);
+}
+
+body.dark-mode .footer-info h4,
+body.dark-mode .social-media h4 {
+    color: var(--primary-color);
+}
+
+body.dark-mode .social-media img {
+    filter: invert(0); /* Não inverte a cor dos ícones se eles já forem claros ou ajustados para o modo escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-section, .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .about-content {
+        order: 2; /* Move o conteúdo para baixo da imagem em telas menores */
+    }
+
+    .hero-image, .about-image {
+        order: 1; /* Move a imagem para cima em telas menores */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info, .social-media {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+}
